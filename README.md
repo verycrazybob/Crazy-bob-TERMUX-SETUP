@@ -15,7 +15,11 @@
 </br>
 <p align="center">
 
-> Welcome to the **Termux Setup Tools**, a professional and user-friendly Bash script designed to optimize your Termux environment! This script installs essential packages, configures your terminal, tests internet speed, displays system information, and much more!  
+> Welcome to  **Termux Setup Tools**, an editable Bash script designed to optimize  Termux environment!
+>  install essential packages
+>  configuration of the terminal
+> tests internet speed
+> displays system information 
 
 
 ## Language</br>
