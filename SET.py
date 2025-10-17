@@ -1,314 +1,297 @@
-#__________________| SCRIPT INFO |__________________#
-# SCRIPT MAKED BY U7P4L 1N
-# PYTHON VERSION : 3.11
-# GITHUB : U7P4L-IN
-# TEAM : ANONYMOUS CYBER
-#_______________| IMPORT MODULES |________________#
-import os
-os.system('pip install requests');os.system('pip install rich')
-import os,time,sys,datetime,rich,requests 
-from rich.console import Console
-from rich import print
-from rich.panel import Panel
-from time import localtime as lt
-print(Panel("[bold black]【[white]•[bold black]】[blue_violet] INSTALLED SYSTEM", style="bold bright_black",title="<[bold white reverse] WELCOME [/bold white reverse]>"));time.sleep(1.5)
-sys.stdout.write('\x1b]2; ANONYMOUS CYBER™🌻🔥💯\x07')
-#__________________| COLOUR |__________________#
-A = '\x1b[1;97m';Y = '\033[1;33m';N1 = '\033[1;92m\x1b[38;5;208m';N2 = '\033[1;92m\x1b[38;5;209m';N3 = '\033[1;92m\x1b[38;5;210m';N4 = '\033[1;92m\x1b[38;5;211m'
-#______________| SOME METHOD |_______________#
-def _clear_():
-    if "linux" in sys.platform.lower():os.system("clear");logo()
-    elif "win" in sys.platform.lower():os.system("cls");logo()
-def clear():
-	_clear_();loadinglisen();_clear_()
-#__________| DATE AND TIME OR IP |______________#
-ip = requests.get("https://api.ipify.org").text
-dic = {'1': 'January', '2': 'February', '3': 'March', '4': 'April', '5': 'May', '6': 'June', '7': 'July', '8': 'August','9': 'September', '10': 'October', '11': 'November', '12': 'December'}
-tgl = datetime.datetime.now().day
-bln = dic[(str(datetime.datetime.now().month))]
-thn = datetime.datetime.now().year
-okc = 'OK-' + str(tgl) + '-' + str(bln) + '-' + str(thn) + '.txt'
-cpc = 'CP-' + str(tgl) + '-' + str(bln) + '-' + str(thn) + '.txt'
-date = str(tgl) + f'/' + str(bln) + f'/' + str(thn)
-ltx = int(lt()[3])
-if ltx > 12:
-    a = ltx - 12
-    tag = "PM"
-else:
-    a = ltx
-    tag = "AM"
-times = time.strftime("%H:%M") + " " + tag
-#_______________| YOUR DETAILS |______________#
-def __details__():
-	print(Panel(f"[bold black]【[white]•[bold black]】[dark_cyan]YOUR IP      [white]➤  [steel_blue1]{ip} \n[bold black]【[white]•[bold black]】[dark_cyan]TODAY TIME   [white]➤  [steel_blue1]{times} \n[bold black]【[white]•[bold black]】[dark_cyan]TODAY DATE   [white]➤  [steel_blue1]{date}",style="bold bright_black",title="<[bold white reverse] YOUR INFO [/bold white reverse]>"))
-#__________________| LOADING SYSTEM |__________________#
-def loadinglisen():
-    animation = ["[\x1b[1;91m■\x1b[0m□□□□□□□□□]","[\x1b[1;92m■■\x1b[0m□□□□□□□□]", "[\x1b[1;93m■■■\x1b[0m□□□□□□□]", "[\x1b[1;94m■■■■\x1b[0m□□□□□□]", "[\x1b[1;95m■■■■■\x1b[0m□□□□□]", "[\x1b[1;96m■■■■■■\x1b[0m□□□□]", "[\x1b[1;97m■■■■■■■\x1b[0m□□□]", "[\x1b[1;98m■■■■■■■■\x1b[0m□□]", "[\x1b[1;99m■■■■■■■■■\x1b[0m□]", "[\x1b[1;910m■■■■■■■■■■\x1b[0m]"]
-    for i in range(50):
-        time.sleep(0.009)
-        sys.stdout.write(f"\r\t {Y}Loading{N1}.{N2}.{N3}.{N4}.{A} " + animation[i % len(animation)] +"\x1b[0m ")
-        sys.stdout.flush()
-    print()
-#__________________| LOGO |__________________#
-def logo():
-    print(" ");print(Panel("[bold red]● [bold yellow]● [bold green]●\n[green1] ╺┳╸┏━╸┏━┓┏┳┓╻ ╻╻ ╻   ┏━┓┏━╸╺┳╸╻ ╻┏━┓\n[spring_green2]  ┃ ┣╸ ┣┳┛┃┃┃┃ ┃┏╋┛   ┗━┓┣╸  ┃ ┃ ┃┣━┛\n[spring_green11]  ╹ ┗━╸╹┗╸╹ ╹┗━┛╹ ╹   ┗━┛┗━╸ ╹ ┗━┛╹  ", style="bold bright_black",title="<[bold white reverse] CODING BY - U7P4L 1N [/bold white reverse]>"))
-    print(Panel("[bold black]【[white]•[bold black]】[bold yellow] DEVELOPER   [white]➤ [dark_olive_green2]U7P4L 1N  \n[bold black]【[white]•[bold black]】[bold yellow] GITHUB      [white]➤ [dark_olive_green2]U7P4L-IN \n[bold black]【[white]•[bold black]】[bold yellow] VERSION     [white]➤ [dark_olive_green2]1.0.2\n[bold black]【[white]•[bold black]】[bold yellow] TELEGRAM    [white]➤ [dark_olive_green2]t.me/TheU7p4lArmyX\n[bold black]【[white]•[bold black]】[bold yellow] TOOL'S NAME [white]➤ [bold purple reverse] TERMUX BESIC SETUP ", style="bold bright_black"))
-#__________________| SETUP LOGO |__________________#
-def logo2():
-    print(" ");print(Panel("[bold red]● [bold yellow]● [bold green]●\n\n[dark_orange3]   ╺┳╸┏━╸┏━┓┏┳┓╻ ╻╻╻   ┏━┓┏━╸╺┳╸╻ ╻┏━┓\n[indian_red]    ┃ ┣╸ ┣┳┛┃┃┃┃ ┃┏╋┛  ┗━┓┣╸  ┃ ┃ ┃┣━┛\n[hot_pink3]    ╹ ┗━╸╹┗╸╹ ╹┗━┛╹ ╹  ┗━┛┗━╸ ╹ ┗━┛╹\n\n[hot_pink2]   ┏━╸╻ ╻╻  ╻     ┏━╸╻┏┓╻╻┏━┓╻ ╻┏━╸╺┳┓\n[orchid]   ┣╸ ┃ ┃┃  ┃     ┣╸ ┃┃┗┫┃┗━┓┣━┫┣╸  ┃┃\n[orange3]   ╹  ┗━┛┗━╸┗━╸   ╹  ╹╹ ╹╹┗━┛╹ ╹┗━╸╺┻┛", style="bold bright_black"))
-#__________________| MAIN MENU |__________________#
-def menu():
-    clear()
-    os.system('xdg-open https://github.com/U7P4L-IN')
-    clear()
-    print(Panel("[bold black]【[white]01[bold yellow]/[white]A[bold black]】[dark_slate_gray3]TERMUX BESIC PKG SETUP\n[bold black]【[white]02[bold yellow]/[white]B[bold black]】[dark_slate_gray3]ADD BANNER IN TERMUX \n[bold black]【[white]03[bold yellow]/[white]C[bold black]】[dark_slate_gray3]REPORT FOR ANY BUGS\n[bold black]【[white]00[bold yellow]/[white]X[bold black]】[red1]EXIT PROGRAMME", style="bold bright_black",title="<[bold white reverse] MAIN MENU [/bold white reverse]>"))
-    option = Console().input("[bold bright_black]   ╰─>[white] ")
-    if option in ['1','01','A','a']:set_up()
-    elif option in ['2','02','B','b']:clear();os.system('rm -rf OP-BANNER && git clone https://github.com/U7P4L-IN/OP-BANNER.git && cd OP-BANNER && python2 Banner1.py')
-    elif option in ['3','03','C','c']:admin()
-    elif option in ['00','0','X','x']:print(Panel("[bold black]【[white]=[bold black]】[bold blue]EXIT DONE ...!!!\n[bold black]【[white]=[bold black]】[bold blue]THANKS FOR USING OUR TOOLS ...!!!", style="bold bright_black",title="<[bold white reverse] EXIT </> [/bold white reverse]>"))
-    else:
-        print(Panel("[bold black]【[white]=[bold black]】 [bold blue]OPTION NOT FOUND IN MENU..",title="<[bold white reverse] EXIT ~ [/bold white reverse]>"));menu()
-#__________________| ADMIN INFO |__________________#
-def admin():
-    clear()
-    print(Panel("[bold black]【[white]01[bold yellow]/[white]A[bold black]】[cyan3]JOIN FB PAGE\n[bold black]【[white]02[bold yellow]/[white]B[bold black]】[cyan3]JOIN FB GROUP\n[bold black]【[white]03[bold yellow]/[white]C[bold black]】[cyan3]JOIN TELEGRAM\n[bold black]【[white]04[bold yellow]/[white]D[bold black]】[cyan3]FOLLOW GITHUB\n[bold black]【[white]00[bold yellow]/[white]X[bold black]】[red1]BACK TO MAIN MENU", style="bold bright_black",title="<[bold white reverse] OUR COMMUNITY [/bold white reverse]>"))
-    option = Console().input("[bold bright_black]   ╰─>[white] ")
-    if option in ['1','01','A','a']:os.system('xdg-open https://www.facebook.com/U7P4L.XR');menu()
-    elif option in ['2','02','B','b']:os.system('xdg-open https://facebook.com/groups/anonymouscyberxd/');menu()
-    elif option in ['3','03','C','c']:os.system('xdg-open https://t.me/U7P4L');menu()
-    elif option in ['4','04','D','d']:os.system('xdg-open https://github.com/U7P4L-IN');menu()
-    elif option in ['0','00','X','x']:menu()
-    else:
-        print(Panel("[bold black]【[white]=[bold black]】 [bold blue]BYE BYE BRO..", style="bold bright_black",title="<[bold white reverse] EXIT ~ [/bold white reverse]>"));menu()
-#__________________| SETUP MENU |__________________#
-def set_up():
-    clear();__details__()
-    print(Panel("[bold black]【[white]01[bold yellow]/[white]A[bold black]】[medium_purple1]TERMUX BASIC SETUP\n[bold black]【[white]02[bold yellow]/[white]B[bold black]】[medium_purple1]TERMUX FULL SETUP\n[bold black]【[white]00[bold yellow]/[white]X[bold black]】[red1]BACK TO MAIN MENU", style="bold bright_black",title="<[bold white reverse] SETUP MENU [/bold white reverse]>"))
-    option = Console().input("[bold bright_black]   ╰─>[white] ")
-    if option in ['1','01','A','a']:basic_setup()
-    elif option in ['2','02','B','b']:full_setup()
-    elif option in ['00','0','X','x']:menu()
-    else:
-        print(Panel("[bold black]【[white]=[bold black]】 [bold blue]OPTION NOT FOUND IN MENU..",title="<[bold white reverse] EXIT ~ [/bold white reverse]>"));menu()
-#__________________| BASIC SETUP |__________________#
-def basic_setup():
-    print(Panel("[bold black]【[white]•[bold black]】[blue_violet]INSTALLING START IN 3 SEC...",style="bold bright_black"));time.sleep(3)
-    print("\n\n");print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2] PKG[light_green] UPDATE ",style="bold bright_black"))
-    os.system("pkg update")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2] PKG[light_green] UPGRADE ",style="bold bright_black"))
-    os.system("pkg upgrade")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PYTHON ",style="bold bright_black"))
-    os.system("pkg install python -y")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PYTHON2 ",style="bold bright_black"))
-    os.system("pkg install python2 -y")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PYTHON3 ",style="bold bright_black"))
-    os.system("pkg install python3")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] TMUX ",style="bold bright_black"))
-    os.system("apt install tmux")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] REQUESTS ",style="bold bright_black"))
-    os.system("pip install requests")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] REQUESTS ",style="bold bright_black"))
-    os.system("pip2 install requests")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PYCURL ",style="bold bright_black"))
-    os.system("pip install pycurl")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] MECHANIZE ",style="bold bright_black"))
-    os.system("pip2 install mechanize")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] BS4 ",style="bold bright_black"))
-    os.system("pip install bs4")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] BS4 ",style="bold bright_black"))
-    os.system("pip2 install bs4")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] RICH ",style="bold bright_black"))
-    os.system("pip install rich")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] RUBY ",style="bold bright_black"))
-    os.system("pip install pycurl")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] LOLCAT ",style="bold bright_black"))
-    os.system("gem install lolcat")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PHP ",style="bold bright_black"))
-    os.system("pip install php")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] LOLCAT ",style="bold bright_black"))
-    os.system("pip install lolcat")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] FETURES ",style="bold bright_black"))
-    os.system("pip install futures")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] HTTPX ",style="bold bright_black"))
-    os.system("pkg install httpx")
-    clear();time.sleep(3);logo2()
-#__________________| FULL SETUP |__________________#
-def full_setup():
-    print(Panel("[bold black]【[white]•[bold black]】[blue_violet]INSTALLING START IN 3 SEC...",style="bold bright_black"));time.sleep(3)
-    print("\n\n");print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2] PKG[light_green] UPDATE ",style="bold bright_black"))
-    os.system("pkg update")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2] PKG[light_green] UPGRADE ",style="bold bright_black"))
-    os.system("pkg upgrade")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PYTHON ",style="bold bright_black"))
-    os.system("pkg install python")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PYTHON2 ",style="bold bright_black"))
-    os.system("pkg install python2")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PYTHON3 ",style="bold bright_black"))
-    os.system("pkg install python3")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] WGET ",style="bold bright_black"))
-    os.system("pkg install wget")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PYTHON PIP ",style="bold bright_black"))
-    os.system("pkg install python-pip")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] FISH ",style="bold bright_black"))
-    os.system("pkg install fish")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] RUBY ",style="bold bright_black"))
-    os.system("pkg install ruby")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] HELP ",style="bold bright_black"))
-    os.system("pkg install help")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] DNSUTILS ",style="bold bright_black"))
-    os.system("pkg install dnsutils  ")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PHP ",style="bold bright_black"))
-    os.system("pkg install php")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PERL ",style="bold bright_black"))
-    os.system("pkg install perl")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] LUA ",style="bold bright_black"))
-    os.system("pkg install lua")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PARALLEL ",style="bold bright_black"))
-    os.system("pkg install parallel")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] NMAP ",style="bold bright_black"))
-    os.system("pkg install nmap")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] BASH ",style="bold bright_black"))
-    os.system("pkg install bash")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] CLANG ",style="bold bright_black"))
-    os.system("pkg install clang")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] NANO ",style="bold bright_black"))
-    os.system("pkg install nano")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] W3M ",style="bold bright_black"))
-    os.system("pkg install w3m")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] HYDRA ",style="bold bright_black"))
-    os.system("pkg install hydra")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] COWSAY ",style="bold bright_black"))
-    os.system("pkg install cowsay")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] CURL ",style="bold bright_black"))
-    os.system("pkg install curl")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] TAR ",style="bold bright_black"))
-    os.system("pkg install tar")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] ZIP ",style="bold bright_black"))
-    os.system("pkg install zip")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] UNZIP ",style="bold bright_black"))
-    os.system("pkg install unzip")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] TOR ",style="bold bright_black"))
-    os.system("pkg install tor")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] NET-TOOLS ",style="bold bright_black"))
-    os.system("pkg install net-tools")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] SUDO ",style="bold bright_black"))
-    os.system("pkg install sudo")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] WIRESHARK ",style="bold bright_black"))
-    os.system("pkg install wireshark")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] TMUX ",style="bold bright_black"))
-    os.system("apt install tmux")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] CRUNCH ",style="bold bright_black"))
-    os.system("pkg install crunch")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] WGETRC ",style="bold bright_black"))
-    os.system("pkg install wgetrc")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] WCALC ",style="bold bright_black"))
-    os.system("pkg install wcalc")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] OPENSSL ",style="bold bright_black"))
-    os.system("pkg install openssl")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] OPENSSL-TOOL ",style="bold bright_black"))
-    os.system("pkg install openssl-tool")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] BMON ",style="bold bright_black"))
-    os.system("pkg install bmon")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] VPN ",style="bold bright_black"))
-    os.system("pkg install vpn")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] UNRAR ",style="bold bright_black"))
-    os.system("pkg install unrar")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] TOILET ",style="bold bright_black"))
-    os.system("pkg install toilet")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PROOT ",style="bold bright_black"))
-    os.system("pkg install proot")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] NET TOOLS ",style="bold bright_black"))
-    os.system("pkg install net-tools")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] VIM ",style="bold bright_black"))
-    os.system("pkg install vim")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] VIN PYTHON ",style="bold bright_black"))
-    os.system("pkg install vim-python")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] IRED ",style="bold bright_black"))
-    os.system("pkg install ired")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] GOACCESS ",style="bold bright_black"))
-    os.system("pkg install goaccess")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] GOLAND ",style="bold bright_black"))
-    os.system("pkg install golang")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] KIBI ",style="bold bright_black"))
-    os.system("pkg install kibi")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] TSU ",style="bold bright_black"))
-    os.system("pkg install tsu")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] MTOOLS ",style="bold bright_black"))
-    os.system("pkg install mtools")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] FILE ",style="bold bright_black"))
-    os.system("pkg install file")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] VIS ",style="bold bright_black"))
-    os.system("pkg install vis")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PASS ",style="bold bright_black"))
-    os.system("pkg install pass")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PIC ",style="bold bright_black"))
-    os.system("pkg install pick")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] CHROOT ",style="bold bright_black"))
-    os.system("pkg install chroot")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] MACCHANGER ",style="bold bright_black"))
-    os.system("pkg install macchanger")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] NINJA ",style="bold bright_black"))
-    os.system("pkg install ninja")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] ELIXIR ",style="bold bright_black"))
-    os.system("pkg install elixir")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] SWIFT ",style="bold bright_black"))
-    os.system("pkg install swift")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] XMLSTARLET ",style="bold bright_black"))
-    os.system("pkg install xmlstarlet")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] FAKEROOT ",style="bold bright_black"))
-    os.system("pkg install fakeroot")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] TEXTINFO ",style="bold bright_black"))
-    os.system("pkg install texinfo")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] NETCET ",style="bold bright_black"))
-    os.system("pkg install netcat")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] WREN ",style="bold bright_black"))
-    os.system("pkg install wren")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] GETLING ",style="bold bright_black"))
-    os.system("pkg install gatling")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] CVS ",style="bold bright_black"))
-    os.system("pkg install cvs")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] FFMPEG ",style="bold bright_black"))
-    os.system("pkg install ffmpeg")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] SCREEN ",style="bold bright_black"))
-    os.system("pkg install screen")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] NEOFETCH ",style="bold bright_black"))
-    os.system("pkg install neofetch")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] MARIADB ",style="bold bright_black"))
-    os.system("pkg install mariadb")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PIOLISP ",style="bold bright_black"))
-    os.system("pkg install picolisp")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] CMATRIX ",style="bold bright_black"))
-    os.system("pkg install cmatrix")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] DROPBEAR ",style="bold bright_black"))
-    os.system("pkg install dropbear")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] OPENSSH ",style="bold bright_black"))
-    os.system("pkg install openssh")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PYTHON PIP ",style="bold bright_black"))
-    os.system("pkg install python-pip")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] WGET ",style="bold bright_black"))
-    os.system("pip2 install wget")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] BS4 ",style="bold bright_black"))
-    os.system("pip install bs4")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] BS4 ",style="bold bright_black"))
-    os.system("pip2 install bs4")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] REQUESTS ",style="bold bright_black"))
-    os.system("pip install requests")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] REQUESTS ",style="bold bright_black"))
-    os.system("pip2 install requests")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] MECHANIZE ",style="bold bright_black"))
-    os.system("pip install mechanize")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PIP2 MECHANIZE ",style="bold bright_black"))
-    os.system("pip2 install mechanize")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PHP ",style="bold bright_black"))
-    os.system("pip install php")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] PIP2 PHP ",style="bold bright_black"))
-    os.system("pip2 install php")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] LOLCAT ",style="bold bright_black"))
-    os.system("gem install lolcat")
-    print(Panel("\t[bold black]【[white]•[bold black]】[sea_green2]INSTALLING[light_green] WGETRC ",style="bold bright_black"))
-    os.system('pip insall pytube')
-    clear();time.sleep(3);logo2()
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Termux Setup – Maik Julien (Ju) – Python 3.11+
+Rework & hardening: menu propre, installs fiables, Rich UI, offline-safe.
+"""
 
-menu()
-#__________________| FINISHED |__________________#
+from __future__ import annotations
+import os, sys, time, subprocess, shutil, json, socket, datetime, platform
+from dataclasses import dataclass, field
+
+# ──────────────────────────[ Config perso ]──────────────────────────
+@dataclass
+class Brand:
+    author: str = "Maik Julien"
+    tool_name: str = "Termux Setup Pro"
+    version: str = "2.0.0"
+    github: str = "https://github.com/U7P4L-IN"   # modifiable
+    telegram: str = "https://t.me/U7P4L"          # modifiable
+    facebook_page: str = "https://www.facebook.com/U7P4L.XR"
+    facebook_group: str = "https://facebook.com/groups/anonymouscyberxd/"
+
+BRAND = Brand()
+
+# ──────────────────────────[ Imports Rich ]──────────────────────────
+try:
+    from rich.console import Console
+    from rich.panel import Panel
+    from rich.table import Table
+    from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TimeElapsedColumn
+    from rich import print as rprint
+except Exception:
+    os.system("pip install --quiet rich")
+    from rich.console import Console
+    from rich.panel import Panel
+    from rich.table import Table
+    from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TimeElapsedColumn
+    from rich import print as rprint
+
+console = Console()
+
+# ──────────────────────────[ Utils ]──────────────────────────
+MONTHS_FR = ["", "janvier","février","mars","avril","mai","juin",
+             "juillet","août","septembre","octobre","novembre","décembre"]
+
+def is_termux() -> bool:
+    return "com.termux" in os.environ.get("PREFIX", "") or "TERMUX_VERSION" in os.environ
+
+def termux_open(url: str):
+    # xdg-open marche bien sous Termux, sinon on ignore
+    try:
+        subprocess.run(["xdg-open", url], check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    except Exception:
+        pass
+
+def run(cmd: list[str], sudo: bool=False) -> int:
+    try:
+        return subprocess.run(cmd, check=False).returncode
+    except Exception:
+        return 1
+
+def run_quiet(cmd: list[str]) -> int:
+    try:
+        return subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=False).returncode
+    except Exception:
+        return 1
+
+def have_net(timeout: float=2.0) -> bool:
+    try:
+        socket.create_connection(("1.1.1.1", 53), timeout=timeout).close()
+        return True
+    except Exception:
+        return False
+
+def get_ip() -> str:
+    if not have_net():
+        return "offline"
+    try:
+        import urllib.request
+        with urllib.request.urlopen("https://api.ipify.org", timeout=3) as r:
+            return r.read().decode().strip()
+    except Exception:
+        return "unknown"
+
+def now_strings():
+    dt = datetime.datetime.now()
+    date_str = f"{dt.day} {MONTHS_FR[dt.month]} {dt.year}"
+    time_str = dt.strftime("%H:%M")
+    return date_str, time_str
+
+def titlebar(text: str):
+    sys.stdout.write(f"\x1b]2;{text}\x07")
+
+def clear():
+    os.system("clear" if os.name != "nt" else "cls")
+
+def ok_panel(msg: str, title="OK"):
+    rprint(Panel(msg, title=f"[bold white]{title}[/]"))
+
+def warn_panel(msg: str, title="INFO"):
+    rprint(Panel(msg, title=f"[bold yellow]{title}[/]"))
+
+def err_panel(msg: str, title="ERREUR"):
+    rprint(Panel(msg, title=f"[bold red]{title}[/]"))
+
+# ──────────────────────────[ Install helpers ]──────────────────────────
+PKG = "pkg" if shutil.which("pkg") else ("apt" if shutil.which("apt") else None)
+PIP = shutil.which("pip") or "pip"
+
+def ensure_pkg(pkgs: list[str]) -> dict[str, bool]:
+    """
+    Tente d'installer chaque paquet Termux. Retourne {pkg: success}
+    Ignore silencieusement les paquets introuvables.
+    """
+    results = {}
+    if not PKG:
+        for p in pkgs:
+            results[p] = False
+        return results
+
+    with Progress(
+        SpinnerColumn(), TextColumn("[bold]Installation[/] {task.description}"),
+        BarColumn(), TimeElapsedColumn(), console=console
+    ) as progress:
+        for p in pkgs:
+            task = progress.add_task(f"{p}", total=None)
+            # check déjà installé ?
+            already = run_quiet([PKG, "show", p]) == 0
+            if already:
+                results[p] = True
+                progress.update(task, description=f"{p} (déjà présent)")
+                progress.remove_task(task)
+                continue
+            # install
+            code = run([PKG, "install", "-y", p])
+            results[p] = (code == 0)
+            progress.remove_task(task)
+    return results
+
+def ensure_pip(pkgs: list[str]) -> dict[str, bool]:
+    results = {}
+    with Progress(
+        SpinnerColumn(), TextColumn("[bold]pip[/] {task.description}"),
+        BarColumn(), TimeElapsedColumn(), console=console
+    ) as progress:
+        for p in pkgs:
+            task = progress.add_task(f"{p}", total=None)
+            code = run([PIP, "install", "--upgrade", "--quiet", p])
+            results[p] = (code == 0)
+            progress.remove_task(task)
+    return results
+
+# ──────────────────────────[ Screens / Panels ]──────────────────────────
+def logo():
+    table = Table.grid(padding=(0,1))
+    table.add_row(f"[bold magenta]{BRAND.tool_name}[/]  [dim]v{BRAND.version}[/]")
+    table.add_row(f"[bold]Auteur:[/] {BRAND.author}")
+    table.add_row(f"[bold]GitHub:[/] {BRAND.github}")
+    table.add_row(f"[bold]Telegram:[/] {BRAND.telegram}")
+    rprint(Panel(table, title="[bold white]WELCOME[/]"))
+
+def details():
+    ip = get_ip()
+    date_str, time_str = now_strings()
+    info = Table.grid(padding=(0,2))
+    info.add_row("[bold cyan]Votre IP[/]", f"[white]{ip}")
+    info.add_row("[bold cyan]Date[/]", f"[white]{date_str}")
+    info.add_row("[bold cyan]Heure[/]", f"[white]{time_str}")
+    rprint(Panel(info, title="[bold white]VOS INFOS[/]"))
+
+def community():
+    table = Table.grid(padding=(0,2))
+    table.add_row("[bold]1[/] • Page Facebook", BRAND.facebook_page)
+    table.add_row("[bold]2[/] • Groupe Facebook", BRAND.facebook_group)
+    table.add_row("[bold]3[/] • Telegram", BRAND.telegram)
+    table.add_row("[bold]4[/] • GitHub", BRAND.github)
+    rprint(Panel(table, title="[bold white]COMMUNAUTÉ[/]"))
+
+# ──────────────────────────[ Menus ]──────────────────────────
+def prompt_choice(question: str, valid: set[str]) -> str:
+    console.print(question, style="bold")
+    while True:
+        choice = console.input("[bold]╰─> [/]").strip().lower()
+        if choice in valid:
+            return choice
+        warn_panel("Option invalide. Réessaie.", "Menu")
+
+def main_menu():
+    clear(); titlebar("⚙️ Termux Setup Pro"); logo()
+    rprint(Panel(
+        "[bold]1[/] • Termux BASIC setup\n"
+        "[bold]2[/] • Termux FULL setup\n"
+        "[bold]3[/] • Communauté & liens\n"
+        "[bold]x[/] • Quitter",
+        title="[bold white]MENU[/]"
+    ))
+    c = prompt_choice("Choisis une option [1/2/3/x]:", {"1","2","3","x"})
+    if c == "1":
+        basic_setup()
+    elif c == "2":
+        full_setup()
+    elif c == "3":
+        community(); 
+        act = prompt_choice("Ouvrir un lien ? [1/2/3/4/n]:", {"1","2","3","4","n"})
+        if act == "1": termux_open(BRAND.facebook_page)
+        elif act == "2": termux_open(BRAND.facebook_group)
+        elif act == "3": termux_open(BRAND.telegram)
+        elif act == "4": termux_open(BRAND.github)
+        time.sleep(0.6)
+        main_menu()
+    else:
+        ok_panel("Merci d’avoir utilisé l’outil. À bientôt !", "EXIT")
+
+# ──────────────────────────[ Setups ]──────────────────────────
+def basic_setup():
+    clear(); logo(); details()
+    warn_panel("Lancement BASIC setup dans 2s…", "BASIC")
+    time.sleep(1.5)
+    if not is_termux():
+        warn_panel("Attention : tu n’es pas dans Termux. Certaines installs peuvent échouer.", "ENV")
+
+    # update / upgrade
+    if PKG:
+        run([PKG, "update"])
+        run([PKG, "upgrade", "-y"])
+
+    pkg_list = [
+        "git", "curl", "wget", "python", "tmux",
+        "openssl", "clang", "nano", "zip", "unzip",
+        "neofetch", "vim", "proot", "fakeroot",
+        "net-tools", "openssh", "ffmpeg", "cmatrix"
+    ]
+    res_pkg = ensure_pkg(pkg_list)
+
+    pip_list = ["requests", "rich", "beautifulsoup4", "httpx", "pycurl", "lxml"]
+    res_pip = ensure_pip(pip_list)
+
+    show_results("BASIC", res_pkg, res_pip)
+    main_menu()
+
+def full_setup():
+    clear(); logo(); details()
+    warn_panel("Lancement FULL setup dans 2s…", "FULL")
+    time.sleep(1.5)
+    if PKG:
+        run([PKG, "update"])
+        run([PKG, "upgrade", "-y"])
+
+    # Liste FULL – uniquement paquets réalistes sous Termux
+    pkg_list = [
+        # base
+        "git","curl","wget","python","vim","nano","tmux","openssh","zip","unzip","tar","proot","fakeroot",
+        "clang","make","neofetch","ffmpeg","net-tools","cmatrix","man",
+        # shells & langages
+        "bash","fish","ruby","php","perl","lua","golang",
+        # web/cli utils
+        "w3m","nmap","hydra","toilet","cowsay","tshark",  # tshark (wireshark CLI)
+        # divers utiles
+        "bmon","htop","screen","dnsutils","xmlstarlet","parallel","kibi","mariadb","cvs"
+    ]
+    res_pkg = ensure_pkg(pkg_list)
+
+    pip_list = [
+        "requests","rich","beautifulsoup4","mechanize","httpx","pycurl","lxml","pytube"
+    ]
+    res_pip = ensure_pip(pip_list)
+
+    # Ruby gem optional (lolcat)
+    if shutil.which("gem"):
+        run(["gem","install","lolcat"])
+
+    show_results("FULL", res_pkg, res_pip)
+    main_menu()
+
+def show_results(mode: str, res_pkg: dict[str,bool], res_pip: dict[str,bool]):
+    table = Table(title=f"Récap install {mode}")
+    table.add_column("Type", style="cyan", no_wrap=True)
+    table.add_column("Nom", style="white")
+    table.add_column("Statut", style="green")
+    ok = "[green]OK[/]"
+    ko = "[red]échec[/]"
+    for k,v in res_pkg.items():
+        table.add_row("pkg", k, ok if v else ko)
+    for k,v in res_pip.items():
+        table.add_row("pip", k, ok if v else ko)
+    rprint(table)
+    warn_panel("Les éléments en échec peuvent être indisponibles sur ton device/arch ou nécessiter des dépôts additionnels.", "NOTE")
+
+# ──────────────────────────[ Entrypoint ]──────────────────────────
+if __name__ == "__main__":
+    try:
+        clear(); logo()
+        if not have_net():
+            warn_panel("Mode hors-ligne détecté : les installs réseau pourront échouer. Tu peux relancer plus tard.", "RÉSEAU")
+        main_menu()
+    except KeyboardInterrupt:
+        err_panel("Interrompu par l’utilisateur.", "STOP")
