@@ -15,10 +15,10 @@ class Brand:
     author: str = "Maik Julien"
     tool_name: str = "Termux Setup Pro"
     version: str = "2.0.0"
-    github: str = "https://github.com/U7P4L-IN"   # modifiable
-    telegram: str = "https://t.me/U7P4L"          # modifiable
-    facebook_page: str = "https://www.facebook.com/U7P4L.XR"
-    facebook_group: str = "https://facebook.com/groups/anonymouscyberxd/"
+    github: str = "https://github.com/verycrazybob"   # modifiable
+    telegram: str = "https://t.me/maikjulien"          # modifiable
+    facebook_page: str = "https://www.facebook.com/maikjulien"
+    facebook_group: str = "https://facebook.com/groups/tsaii/"
 
 BRAND = Brand()
 
